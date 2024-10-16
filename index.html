@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Management System</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            background-color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #0056b3;
+        }
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            color: #333;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /* Special style for Admin button */
+        .admin-btn {
+            background-color: #dc3545; /* Red background */
+            color: white; /* White text */
+            font-weight: bold; /* Bold text */
+            border-radius: 5px; /* Rounded corners */
+            padding: 12px 20px; /* Padding */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effects */
+        }
+        .admin-btn:hover {
+            background-color: #c82333; /* Darker red on hover */
+            transform: scale(1.05); /* Slightly enlarge */
+        }
+
+        /* Main Section */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            padding: 0 20px;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        p {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .features {
+            margin: 50px 0;
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            flex-wrap: wrap;
+        }
+        .feature {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            min-width: 250px;
+            margin: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .feature:hover {
+            transform: scale(1.05);
+        }
+        .feature h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+        .feature p {
+            font-size: 16px;
+            color: #666;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 14px;
+            position: relative;
+        }
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Student Result Management System</h1>
+        <p>Your comprehensive platform for managing student results and records.</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#">Home</a>
+        <div class="dropdown">
+            <a href="#">Features</a>
+            <div class="dropdown-content">
+                <a href="results.html">View Student Results</a>
+                <a href="profile.html">Manage Student Profiles</a>
+            </div>
+        </div>
+        <a href="./contact.html">Contact Us</a>
+        <a href="./about.html">About Us</a>
+        <a href="admin.html" class="admin-btn">Admin Dashboard</a> <!-- Admin button with special style -->
+    </nav>
+
+    <!-- Main Section -->
+    <main>
+        <p>Efficiently manage and access student results and academic records.</p>
+        <a href="login.html" class="btn">Login to Your Account</a>
+        <a href="signup.html" class="btn" style="background-color: #28a745;">Create an Account</a>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="feature">
+                <h3>Secure Login</h3>
+                <p>Access your student results securely with unique logins for each user.</p>
+            </div>
+            <div class="feature">
+                <h3>Data Management</h3>
+                <p>Store, manage, and retrieve academic records with ease using our system.</p>
+            </div>
+            <div class="feature">
+                <h3>Performance Reports</h3>
+                <p>Generate detailed performance reports for students, teachers, and administrators.</p>
+            </div>
+            <div class="feature">
+                <h3>User-Friendly Interface</h3>
+                <p>Our intuitive design ensures a seamless experience for all users.</p>
+            </div>
+            <div class="feature">
+                <h3>24/7 Support</h3>
+                <p>Our support team is available around the clock to assist you with any inquiries.</p>
+            </div>
+            <div class="feature">
+                <h3>Data Security</h3>
+                <p>Your data is protected with top-notch security measures and encryption.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Student Result Management System. All rights reserved. | 
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a>
+        </p>
+    </footer>
+</body>
+</html>
